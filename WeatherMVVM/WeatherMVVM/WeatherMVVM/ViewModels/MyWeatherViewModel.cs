@@ -8,11 +8,11 @@ using Xamarin.Forms;
 
 namespace WeatherMVVM.ViewModel
 {
-    class ViewModelForWeather : INotifyPropertyChanged
+    class MyWeatherViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        ViewModelForWeather() { }
+        public MyWeatherViewModel() { }
 
         private Command _clickCommand;
         private string _inCityName;

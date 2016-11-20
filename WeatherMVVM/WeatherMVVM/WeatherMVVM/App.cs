@@ -12,7 +12,7 @@ namespace WeatherMVVM
         public App()
         {
             // The root page of your application
-            MainPage = new ViewsWeather();
+            MainPage = new MyWeatherViews();
         }
 
         protected override void OnStart()
