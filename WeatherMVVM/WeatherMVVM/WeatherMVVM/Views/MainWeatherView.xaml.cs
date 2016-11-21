@@ -8,12 +8,12 @@ using Xamarin.Forms;
 
 namespace WeatherMVVM.Views
 {
-    public partial class MyWeatherView : ContentPage
+    public partial class MainWeatherView : ContentPage
     {
-        public MyWeatherView()
+        public MainWeatherView()
         {
             InitializeComponent();
-            BindingContext = new ViewModel.MyWeatherViewModel();
+            BindingContext = new ViewModel.MainWeatherViewModel();
         }
     }
 }
