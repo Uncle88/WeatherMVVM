@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherMVVM.Views.FavoriteWeatherView">
+  <ContentPage.Content>
+       <Grid BackgroundColor="@drawable/Weather" Orientation="Vertical">
+         <Grid.ColumnDefinitions>
+           <ColumnDefinition Width="*"/>
+           <ColumnDefinition Width="*"/>
+         </Grid.ColumnDefinitions>
+         <Grid.RowDefinitions>
+           <RowDefinition Height="Auto"/>
+           <RowDefinition Height="Auto"/>
+           <RowDefinition Height="Auto"/>
+           <RowDefinition Height="Auto"/>
+           <RowDefinition Height="Auto"/>
+           <RowDefinition Height="Auto"/>
+           <RowDefinition Height="Auto"/>
+           <RowDefinition Height="Auto"/>
+         </Grid.RowDefinitions>
+         
+       <Label Text="{Binding InCityName}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
+         
+        <Label Text="Wind" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Column="0" Grid.Row="1"/>
+        <Label Text="{Binding Wind}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Column="1" Grid.Row="1"/>
+
+        <Label Text="Cloudiness" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Column="0" Grid.Row="2"/>
+        <Label Text="{Binding Cloudiness}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Column="1" Grid.Row="2"/>
+
+        <Label Text="Pressure" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Column="0" Grid.Row="3"/>
+        <Label Text="{Binding Pressure}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Column="1" Grid.Row="3"/>
+
+        <Label Text="Humidity" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Column="0" Grid.Row="4"/>
+        <Label Text="{Binding Humidity}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Column="1" Grid.Row="4"/>
+
+        <Label Text="Sunrise" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Column="0" Grid.Row="5"/>
+        <Label Text="{Binding Sunrise}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Column="1" Grid.Row="5"/>
+
+        <Label Text="Sunset" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Column="0" Grid.Row="6"/>
+        <Label Text="{Binding Sunset}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Column="1" Grid.Row="6"/>
+
+        <Label Text="Geo coord" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Column="0" Grid.Row="7"/>
+        <Label Text="{Binding Geo coord}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Column="1" Grid.Row="7"/>
+
+      </Grid>
+   </ContentPage.Content>
+</ContentPage>

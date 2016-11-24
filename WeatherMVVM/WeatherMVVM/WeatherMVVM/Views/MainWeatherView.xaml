@@ -16,11 +16,4 @@
   </Grid>
   </StackLayout>
 </ContentPage.Content>
- <!-- <ContentPage.ToolbarItems>
-<ToolbarItem
-        Name="Profile"
-        Icon="ic_action_person.png"
-        Order="Default" />
-  </ContentPage.ToolbarItems>-->
-
 </ContentPage>
