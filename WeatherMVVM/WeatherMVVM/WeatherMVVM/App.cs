@@ -9,10 +9,10 @@ namespace WeatherMVVM
 {
     public class App : Application
     {
-        public App()
+        public Page GetMainWeatherView()
         {
             // The root page of your application
-            MainPage = new NavigationPage (new MainWeatherView());
+            return new NavigationPage (new MainWeatherView());
         }
 
         protected override void OnStart()

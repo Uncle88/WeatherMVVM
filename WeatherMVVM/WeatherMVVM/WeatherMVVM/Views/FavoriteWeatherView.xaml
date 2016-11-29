@@ -43,5 +43,5 @@
         <Label Text="{Binding Geo coord}" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" Grid.Column="1" Grid.Row="7"/>
 
       </Grid>
-   </ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>
