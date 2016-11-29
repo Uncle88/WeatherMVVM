@@ -9,6 +9,11 @@ namespace WeatherMVVM
 {
     public class App : Application
     {
+        public App()
+        {
+            MainPage = new NavigationPage(new MainWeatherView());
+        }
+
         public Page GetMainWeatherView()
         {
             // The root page of your application
