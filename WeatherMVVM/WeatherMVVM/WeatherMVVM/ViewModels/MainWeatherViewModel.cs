@@ -16,7 +16,6 @@ namespace WeatherMVVM.ViewModels
         public MainWeatherViewModel(INavigation navigation)
         {
             _navigation = navigation;
-           // _clickCommand = new Command;
         }
 
         public MainWeatherViewModel()
@@ -36,14 +35,6 @@ namespace WeatherMVVM.ViewModels
 
         private Command _clickCommand;
         private string _inCityName;
-
-        private string _wind;
-        private string _cloudiness;
-        private string _pressure;
-        private string _humidity;
-        private string _sunrise;
-        private string _sunset;
-        private double _geoCoord;
 
         public string InCityName
         {
