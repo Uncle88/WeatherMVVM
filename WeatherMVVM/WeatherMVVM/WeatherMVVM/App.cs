@@ -14,12 +14,6 @@ namespace WeatherMVVM
             MainPage = new NavigationPage(new MainWeatherView());
         }
 
-        //public Page GetMainWeatherView()
-        //{
-        //    // The root page of your application
-        //    return new NavigationPage (new MainWeatherView());
-        //}
-
         protected override void OnStart()
         {
             // Handle when your app starts
