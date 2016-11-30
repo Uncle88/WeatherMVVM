@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WeatherMVVM.Views.FavoriteWeatherView">
   <ContentPage.Content>
-       <Grid BackgroundColor="@drawable/Weather" Orientation="Vertical">
+       <Grid >    <!-- Orientation="Vertical"            BackgroundColor="@drawable/Weather"-->
          <Grid.ColumnDefinitions>
            <ColumnDefinition Width="*"/>
            <ColumnDefinition Width="*"/>
