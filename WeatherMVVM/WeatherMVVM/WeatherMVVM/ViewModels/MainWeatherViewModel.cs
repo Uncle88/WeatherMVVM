@@ -1,5 +1,4 @@
-﻿using Android.Content.Res;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -12,18 +11,39 @@ namespace WeatherMVVM.ViewModels
 {
     class MainWeatherViewModel : WeatherViewModelBase
     {
-        public MainWeatherViewModel()
+        private INavigation _navigation;
+
+        public MainWeatherViewModel(INavigation navigation)
         {
-            _clickCommand = new Command(ToFavoriteWeatherView);
+            _navigation = navigation;
+           // _clickCommand = new Command;
         }
 
-        private async void ToFavoriteWeatherView()
+        public MainWeatherViewModel()
         {
-            await Navigation.PushAsync(new FavoriteWeatherView()); 
+        }
+
+        public Command ClickCommand
+        {
+            get {
+                return _clickCommand ?? (_clickCommand = new Command( async () =>
+           {
+               await _navigation.PushAsync(new FavoriteWeatherView());
+
+           }));
+            }
         }
 
         private Command _clickCommand;
         private string _inCityName;
+
+        private string _wind;
+        private string _cloudiness;
+        private string _pressure;
+        private string _humidity;
+        private string _sunrise;
+        private string _sunset;
+        private double _geoCoord;
 
         public string InCityName
         {
@@ -33,14 +53,5 @@ namespace WeatherMVVM.ViewModels
             }
         }
 
-        public Command ClickCommand
-        {
-            get {
-                return _clickCommand ?? (_clickCommand = new Command(() =>
-           {
-               
-           }));
-            }
-        }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using WeatherMVVM.ViewModels;
 using Xamarin.Forms;
 
 namespace WeatherMVVM.Views
@@ -13,7 +13,8 @@ namespace WeatherMVVM.Views
         public MainWeatherView()
         {
             InitializeComponent();
-            BindingContext = new ViewModels.MainWeatherViewModel();
+            BindingContext = new MainWeatherViewModel(this.Navigation);
         }
+
     }
 }
