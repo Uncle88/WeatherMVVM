@@ -8,11 +8,13 @@ using Xamarin.Forms;
 
 namespace WeatherMVVM.Views
 {
-    public partial class ViewsWeather : ContentPage
+    public partial class FavoriteWeatherView : ContentPage
     {
-        public ViewsWeather()
+        public FavoriteWeatherView()
         {
             InitializeComponent();
         }
+
+
     }
 }

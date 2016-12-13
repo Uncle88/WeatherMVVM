@@ -1,18 +1,26 @@
-﻿using System;
+﻿using Android.Content.Res;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WeatherMVVM.Views;
 using Xamarin.Forms;
 
-namespace WeatherMVVM.ViewModel
+namespace WeatherMVVM.ViewModels 
 {
-    class ViewModelForWeather : INotifyPropertyChanged
+    class MainWeatherViewModel : WeatherViewModelBase
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public MainWeatherViewModel()
+        {
+            _clickCommand = new Command(ToFavoriteWeatherView);
+        }
 
-        ViewModelForWeather() { }
+        private async void ToFavoriteWeatherView()
+        {
+            await Navigation.PushAsync(new FavoriteWeatherView()); 
+        }
 
         private Command _clickCommand;
         private string _inCityName;
@@ -25,17 +33,12 @@ namespace WeatherMVVM.ViewModel
             }
         }
 
-        private void OnPropertyChanged(string _inCityName)
-        {
-            PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(_inCityName));
-        }
-
         public Command ClickCommand
         {
             get {
                 return _clickCommand ?? (_clickCommand = new Command(() =>
            {
-                //I don't known(((
+               
            }));
             }
         }
